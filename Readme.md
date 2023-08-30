@@ -4,5 +4,6 @@
 
 - HTML
 - CSS (TailwindCSS)
+- JS (Alpine.js)
 
 ### Ссылка для просмотра сайта: [VK]("Сайт на Netlify")

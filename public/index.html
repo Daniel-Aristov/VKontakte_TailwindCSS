@@ -18,11 +18,14 @@
 	<link rel="stylesheet" href="assets/styles/style.css">
 	<style>
 		[x-cloak] { display: none !important; }
+		.text-xs {
+			font-size: 0.9rem !important;
+		}
 	</style>
 </head>
-<body class="min-h-screen bg-gray-100 text-sm">
+<body class="min-h-screen bg-gray-100 text-xs">
 
-	<header class="bg-white border-b">
+	<header class="sticky top-0 z-10 bg-white border-b">
 		<div class="container mx-auto" style="max-width: 970;">
 			<div class="flex justify-between items-center h-12">
 				<div class="flex items-center h-full">
@@ -129,11 +132,17 @@
 	<section>
 		<div class="container mx-auto">
 			<div class="flex items-start pt-4">
-				<div class="w-40 mr-2 flex-shrink-0">
+				<div class="w-40 mr-2 flex-shrink-0 text-xs">
 					<div>
 						<ul>
 							<li>
-								<a href="#" class="flex item-center p-1.5 rounded hover:bg-gray-200">
+								<a href="#" class="relative flex item-center p-1.5 rounded hover:bg-gray-200 group">
+									<div class="absolute left-0 top-0 mt-2 -ml-4 opacity-0 group-hover:opacity-100 transition duration-300">
+										<svg class="w-4 text-gray-400 opacity-50 hover:opacity-100" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+											<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+										</svg>										
+									</div>
 									<div class="mr-2">
 										<svg class="w-5 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
 											<path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -336,8 +345,455 @@
 					</div>
 				</div>
 				<div class="w-56 mr-4 flex-shrink-0">
-					<div class="bg-white p-4">
-						Center
+					<div class="bg-white rounded border p-3 pb-1.5 mb-4">
+						<div class="relative overflow-hidden group">
+							<img class="rounded-sm cursor-pointer" src="assets/images/avatar.jpg" alt="avatar">
+							<div class="absolute top-0 right-0 opacity-0 group-hover:opacity-100">
+								<button class="flex items-center justify-center w-4 h-4 bg-black bg-opacity-50 text-white text-opacity-75 hover:text-opacity-100 rounded-tr-sm rounded-bl-sm focus:outline-none">
+									<svg class="w-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+										<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+									</svg>
+								</button>
+							</div>
+							<div class="absolute bottom-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-12 hover:translate-y-0 transition">
+								<ul class="bg-black bg-opacity-50 rounded-b-sm pb-1">
+									<li>
+										<a href="#" class="flex items-center px-2 py-1 text-white text-opacity-75 hover:text-opacity-100">
+											<div class="mr-2">
+												<svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+													<path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+												</svg>												
+											</div>
+											Обновить фотографию
+										</a>
+									</li>
+									<li>
+										<a href="#" class="flex items-center px-2 py-1 text-white text-opacity-75 hover:text-opacity-100">
+											<div class="mr-2">
+												<svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+													<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+												</svg>												
+											</div>
+											Изменить миниатюру
+										</a>
+									</li>
+									<li>
+										<a href="#" class="flex items-center px-2 py-1 text-white text-opacity-75 hover:text-opacity-100">
+											<div class="mr-2">
+												<svg class="w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+													<path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
+												</svg>
+											</div>
+											Добавить эффекты
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="pt-3">
+							<button class="bg-gray-200 rounded w-full px-3 py-1.5 text-gray-500 hover:text-opacity-75" type="button">Редактировать</button>
+						</div>
+						<ul class="pt-3 -mx-3">
+							<li>
+								<a href="#" class="flex items-center px-3 py-2 font-medium text-gray-500 hover:bg-gray-100 group">
+									<div class="mr-2">
+										<svg class="w-5 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+										</svg>										
+									</div>
+									Статистика страницы
+								</a>
+							</li>
+							<li>
+								<a href="#" class="flex items-center px-3 py-2 font-medium text-gray-500 hover:bg-gray-100 group">
+									<div class="mr-2">
+										<svg class="w-5 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+										</svg>
+									</div>
+									Воспоминания
+								</a>
+							</li>
+							<li>
+								<a href="#" class="flex items-center px-3 py-2 font-medium text-gray-500 hover:bg-gray-100 group">
+									<div class="mr-2">
+										<svg class="w-5 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+										</svg>
+									</div>
+									Архив историй
+								</a>
+							</li>
+							<li>
+								<a href="#" class="flex items-center px-3 py-2 font-medium text-gray-500 hover:bg-gray-100 group">
+									<div class="mr-2">
+										<svg class="w-5 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
+										</svg>										
+									</div>
+									Денежные переводы
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="bg-white rounded border mb-4">
+						<div class="flex justify-between items-center font-medium">
+							<a href="#" class="pl-3 pt-2 flex-1">
+								Друзья
+								<span class="text-gray-500"> 52</span>
+							</a>
+							<a href="#" class="pr-3 pt-2 text-gray-500 hover:underline">обновление</a>
+						</div>
+						<div class="grid grid-cols-3 gap-3 p-3">
+							<div>
+								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
+									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+								</a>
+								<div class="text-center truncate -mx-1">
+									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Иван</a>
+								</div>
+							</div>
+							<div>
+								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
+									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+								</a>
+								<div class="text-center truncate -mx-1">
+									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Дмитрий</a>
+								</div>
+							</div>
+							<div>
+								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
+									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+								</a>
+								<div class="text-center truncate -mx-1">
+									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Никита</a>
+								</div>
+							</div>
+							<div>
+								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
+									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+								</a>
+								<div class="text-center truncate -mx-1">
+									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Сергей</a>
+								</div>
+							</div>
+							<div>
+								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
+									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+								</a>
+								<div class="text-center truncate -mx-1">
+									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Игорь</a>
+								</div>
+							</div>
+							<div>
+								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
+									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+								</a>
+								<div class="text-center truncate -mx-1">
+									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Антон</a>
+								</div>
+							</div>
+						</div>
+						<div class="bg-gray-200 h-px"></div>
+						<div class="flex justify-between items-center font-medium">
+							<a href="#" class="pl-3 pt-2 flex-1">
+								Друзья онлайн
+								<span class="text-gray-500"> 7</span>
+							</a>
+						</div>
+						<div class="grid grid-cols-3 gap-3 p-3">
+							<div>
+								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
+									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+								</a>
+								<div class="text-center truncate -mx-1">
+									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Иван</a>
+								</div>
+							</div>
+							<div>
+								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
+									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+								</a>
+								<div class="text-center truncate -mx-1">
+									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Дмитрий</a>
+								</div>
+							</div>
+							<div>
+								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
+									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+								</a>
+								<div class="text-center truncate -mx-1">
+									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Никита</a>
+								</div>
+							</div>
+							<div>
+								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
+									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+								</a>
+								<div class="text-center truncate -mx-1">
+									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Сергей</a>
+								</div>
+							</div>
+							<div>
+								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
+									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+								</a>
+								<div class="text-center truncate -mx-1">
+									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Игорь</a>
+								</div>
+							</div>
+							<div>
+								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
+									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+								</a>
+								<div class="text-center truncate -mx-1">
+									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Антон</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bg-white rounded border">
+						<div class="flex justify-between items-center font-medium mb-2">
+							<a href="#" class="pl-3 pt-2 flex-1">
+								Подписки
+								<span class="text-gray-500"> 26</span>
+							</a>
+						</div>
+						<ul class="px-3">
+							<li class="flex my-4">
+								<a href="#" class="block px-1 flex flex-shrink-0 items-center justify-center">
+									<img class="w-11 h-11 rounded-full" src="assets/images/закат.jpeg" alt="avatar">
+								</a>
+								<div class="pl-2 flex-1 overflow-hidden">
+									<a href="#" class="block text-blue-800 hover:underline mb-1 truncate font-medium">
+										Web /> HTML CSS JS
+									</a>
+									<div class="text-xs text-gray-700">
+										Сообщество для web-разработчиков
+									</div>
+								</div>
+							</li>
+							<li class="flex my-4">
+								<a href="#" class="block px-1 flex flex-shrink-0 items-center justify-center">
+									<img class="w-11 h-11 rounded-full" src="assets/images/закат.jpeg" alt="avatar">
+								</a>
+								<div class="pl-2 flex-1 overflow-hidden">
+									<a href="#" class="block text-blue-800 hover:underline mb-1 truncate font-medium">
+										Web /> HTML CSS JS
+									</a>
+									<div class="text-xs text-gray-700">
+										Сообщество для web-разработчиков
+									</div>
+								</div>
+							</li>
+							<li class="flex my-4">
+								<a href="#" class="block px-1 flex flex-shrink-0 items-center justify-center">
+									<img class="w-11 h-11 rounded-full" src="assets/images/закат.jpeg" alt="avatar">
+								</a>
+								<div class="pl-2 flex-1 overflow-hidden">
+									<a href="#" class="block text-blue-800 hover:underline mb-1 truncate font-medium">
+										Web /> HTML CSS JS
+									</a>
+									<div class="text-xs text-gray-700">
+										Сообщество для web-разработчиков
+									</div>
+								</div>
+							</li>
+							<li class="flex my-4">
+								<a href="#" class="block px-1 flex flex-shrink-0 items-center justify-center">
+									<img class="w-11 h-11 rounded-full" src="assets/images/закат.jpeg" alt="avatar">
+								</a>
+								<div class="pl-2 flex-1 overflow-hidden">
+									<a href="#" class="block text-blue-800 hover:underline mb-1 truncate font-medium">
+										Web /> HTML CSS JS
+									</a>
+									<div class="text-xs text-gray-700">
+										Сообщество для web-разработчиков
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="bg-gray-200 h-px"></div>
+						<div class="flex justify-between items-center font-medium">
+							<a href="#" class="pl-3 pb-1 pt-2 flex-1">
+								Статьи
+								<span class="text-gray-500"> 2</span>
+							</a>
+							<a href="#" class="pr-3 pt-2 text-gray-500 hover:underline">создать</a>
+						</div>
+						<ul class="px-3">
+							<li class="my-4">
+								<a href="#" class="block">
+									<div class="relative overflow-hidden rounded">
+										<img class="w-full h-28 object-cover object-center" src="assets/images/library.jpg" alt="bg">
+										<div class="absolute inset-0 bg-black opacity-75 flex items-center justify-center">
+											<button type="button" class="px-2 py-1 hover:opacity-75 rounded bg-white text-black shadow flex items-center justify-center focus:outline">
+												<div class="mr-1">
+													<svg class="w-3 text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+														<path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clip-rule="evenodd" />
+													</svg>													
+												</div>
+												Читать
+											</button>
+										</div>
+									</div>
+									<div class="pt-1 text-blue-800 hover:underline">
+										Нужно ли много читать?
+									</div> 
+								</a>
+							</li>
+							<li class="my-4">
+								<a href="#" class="block">
+									<div class="relative overflow-hidden rounded">
+										<img class="w-full h-28 object-cover object-center" src="assets/images/library.jpg" alt="bg">
+										<div class="absolute inset-0 bg-black opacity-75 flex items-center justify-center">
+											<button type="button" class="px-2 py-1 hover:opacity-75 rounded bg-white text-black shadow flex items-center justify-center focus:outline">
+												<div class="mr-1">
+													<svg class="w-3 text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+														<path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clip-rule="evenodd" />
+													</svg>
+												</div>
+												Читать
+											</button>
+										</div>
+									</div>
+									<div class="pt-1 text-blue-800 hover:underline">
+										Нужно ли много читать?
+									</div> 
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="bg-white rounded border mt-4">
+						<div class="flex justify-between items-center font-medium mb-2">
+							<a href="#" class="pl-3 pt-2 flex-1">
+								Видеозаписи
+								<span class="text-gray-500"> 48</span>
+							</a>
+						</div>
+						<ul class="px-3">
+							<li class="my-4">
+								<a href="#" class="block">
+									<div class="relative overflow-hidden rounded">
+										<img class="w-full h-28 object-cover object-center" src="assets/images/gitara.jpg" alt="bg">
+										<div class="absolute top-10 left-20">
+											<button type="button" class="w-8 h-8 flex items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-75 rounded-full focus:outline-none">
+												<svg class="w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+													<path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clip-rule="evenodd" />
+												</svg>
+											</button>
+										</div>
+										<div class="absolute bottom-2 right-2 text-white bg-black bg-opacity-50 px-1">
+											2:21
+										</div>
+									</div>
+									<div class="pt-1 text-blue-800 hover:underline truncate">
+										Уроки игры на гитаре
+									</div> 
+								</a>
+							</li>
+							<li class="my-4">
+								<a href="#" class="block">
+									<div class="relative overflow-hidden rounded">
+										<img class="w-full h-28 object-cover object-center" src="assets/images/gitara.jpg" alt="bg">
+										<div class="absolute top-10 left-20">
+											<button type="button" class="w-8 h-8 flex items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-75 rounded-full focus:outline-none">
+												<svg class="w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+													<path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clip-rule="evenodd" />
+												</svg>
+											</button>
+										</div>
+										<div class="absolute bottom-2 right-2 text-white bg-black bg-opacity-50 px-1">
+											4:18
+										</div>
+									</div>
+									<div class="pt-1 text-blue-800 hover:underline truncate">
+										Игра на гитаре
+									</div> 
+								</a>
+							</li>
+						</ul>
+						<div class="bg-gray-200 h-px"></div>
+						<div class="flex justify-between items-center font-medium mb-3">
+							<a href="#" class="pl-3 pt-2 flex-1">
+								Аудиозаписи
+								<span class="text-gray-500"> 328</span>
+							</a>
+						</div>
+						<ul class="px-3">
+							<li class="my-1.5">
+								<a href="#" class="p-1 flex items-center justify-center hover:bg-gray-200 rounded group">
+									<div class="relative w-10 h-10 bg-blue-50 group-hover:bg-gray-500 rounded flex-shrink-0">
+										<div class="absolute inset-0 opacity-100 group-hover:opacity-0 flex items-center justify-center">
+											<svg class="w-5 text-blue-500 text-opacity-60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+												<path fill-rule="evenodd" d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572v9.737a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V9.017 5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.122z" clip-rule="evenodd" />
+											</svg>
+										</div>
+										<div class="absolute inset-0 opacity-0 group-hover:opacity-100 flex items-center justify-center">
+											<svg class="w-7 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+												<path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z" clip-rule="evenodd" />
+											</svg>
+										</div>
+									</div>
+									<div class="pl-3 flex-1 overflow-hidden">
+										<div class="font-medium truncate">
+											Беспечный ангел
+										</div>
+										<div class="inline-block text-gray-400 hover:underline truncate">
+											Ария
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="my-1.5">
+								<a href="#" class="p-1 flex items-center justify-center hover:bg-gray-200 rounded group">
+									<div class="relative w-10 h-10 bg-blue-50 group-hover:bg-gray-500 rounded flex-shrink-0">
+										<div class="absolute inset-0 opacity-100 group-hover:opacity-0 flex items-center justify-center">
+											<svg class="w-5 text-blue-500 text-opacity-60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+												<path fill-rule="evenodd" d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572v9.737a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V9.017 5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.122z" clip-rule="evenodd" />
+											</svg>
+										</div>
+										<div class="absolute inset-0 opacity-0 group-hover:opacity-100 flex items-center justify-center">
+											<svg class="w-7 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+												<path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z" clip-rule="evenodd" />
+											</svg>
+										</div>
+									</div>
+									<div class="pl-3 flex-1 overflow-hidden">
+										<div class="font-medium truncate">
+											Романс
+										</div>
+										<div class="inline-block text-gray-400 hover:underline truncate">
+											Сплин
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="my-1.5">
+								<a href="#" class="p-1 flex items-center justify-center hover:bg-gray-200 rounded group">
+									<div class="relative w-10 h-10 bg-blue-50 group-hover:bg-gray-500 rounded flex-shrink-0">
+										<div class="absolute inset-0 opacity-100 group-hover:opacity-0 flex items-center justify-center">
+											<svg class="w-5 text-blue-500 text-opacity-60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+												<path fill-rule="evenodd" d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572v9.737a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V9.017 5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.122z" clip-rule="evenodd" />
+											</svg>
+										</div>
+										<div class="absolute inset-0 opacity-0 group-hover:opacity-100 flex items-center justify-center">
+											<svg class="w-7 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+												<path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z" clip-rule="evenodd" />
+											</svg>
+										</div>
+									</div>
+									<div class="pl-3 flex-1 overflow-hidden">
+										<div class="font-medium truncate">
+											Кукла колдуна
+										</div>
+										<div class="inline-block text-gray-400 hover:underline truncate">
+											Король и Шут
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 				<div class="flex-1">

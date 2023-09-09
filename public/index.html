@@ -15,11 +15,18 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 	<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/1.2.0/balloon.min.css" integrity="sha512-6jHrqOB5TcbWsW52kWP9TTx06FHzpj7eTOnuxQrKaqSvpcML2HTDR2/wWWPOh/YvcQQBGdomHL/x+V1Hn+AWCA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="assets/styles/style.css">
 	<style>
 		[x-cloak] { display: none !important; }
 		.text-xs {
 			font-size: 0.9rem !important;
+		}
+		.pt-full {
+			padding-top: 100%;
+		}
+		.min-h-28 {
+			min-height: 5rem;
 		}
 	</style>
 </head>
@@ -65,7 +72,7 @@
 						<svg class="w-6 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
 						</svg>
-						<div class="absolute top-0 right-0 w-4 h-4 mt-2 mr-3 flex justify-center items-center rounded-full text-xs font-medium bg-red-400">2</div>
+						<div class="absolute top-0 right-0 w-4 h-4 mt-2 mr-3 flex justify-center items-center rounded-full text-xs font-medium text-white bg-red-600">2</div>
 					</div>
 					<div class="flex items-center h-full hover:bg-gray-100 px-4 cursor-pointer">
 						<div class="flex items-center">
@@ -300,8 +307,8 @@
 							<li class="px-2"><a href="#" class="block text-gray-500 mb-1 text-xs hover:underline">Для бизнеса</a></li>
 							<li class="px-2"><a href="#" class="block text-gray-500 mb-1 text-xs hover:underline">Авторам</a></li>
 							<li class="px-2">
-								<div x-data="{ open: false }" class="relative">
-									<button x-on:mouseenter="open = true" x-on:mouseleave="open = false" type="button" href="#" class="block text-gray-500 text-xs hover:underline flex items-center">
+								<div x-data="{ open: false }" x-on:mouseenter="open = true" x-on:mouseleave="open = false" class="relative">
+									<button type="button" href="#" class="block text-gray-500 text-xs hover:underline flex items-center">
 										<div>Еще</div>
 										<div class="ml-1 mt-1">
 											<svg class="w-2 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor">
@@ -455,7 +462,7 @@
 							</div>
 							<div>
 								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
-									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+									<img class="w-12 h-12 rounded-full" src="assets/images/post_1.jpg" alt="avatar">
 								</a>
 								<div class="text-center truncate -mx-1">
 									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Дмитрий</a>
@@ -463,7 +470,7 @@
 							</div>
 							<div>
 								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
-									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+									<img class="w-12 h-12 rounded-full" src="assets/images/post_10.jpg" alt="avatar">
 								</a>
 								<div class="text-center truncate -mx-1">
 									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Никита</a>
@@ -471,7 +478,7 @@
 							</div>
 							<div>
 								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
-									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+									<img class="w-12 h-12 rounded-full" src="assets/images/post_12.jpg" alt="avatar">
 								</a>
 								<div class="text-center truncate -mx-1">
 									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Сергей</a>
@@ -479,7 +486,7 @@
 							</div>
 							<div>
 								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
-									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+									<img class="w-12 h-12 rounded-full" src="assets/images/post_13.jpg" alt="avatar">
 								</a>
 								<div class="text-center truncate -mx-1">
 									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Игорь</a>
@@ -487,7 +494,7 @@
 							</div>
 							<div>
 								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
-									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+									<img class="w-12 h-12 rounded-full" src="assets/images/post_14.jpg" alt="avatar">
 								</a>
 								<div class="text-center truncate -mx-1">
 									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Антон</a>
@@ -504,7 +511,7 @@
 						<div class="grid grid-cols-3 gap-3 p-3">
 							<div>
 								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
-									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+									<img class="w-12 h-12 rounded-full" src="assets/images/post_8.jpg" alt="avatar">
 								</a>
 								<div class="text-center truncate -mx-1">
 									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Иван</a>
@@ -512,7 +519,7 @@
 							</div>
 							<div>
 								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
-									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+									<img class="w-12 h-12 rounded-full" src="assets/images/post_9.jpg" alt="avatar">
 								</a>
 								<div class="text-center truncate -mx-1">
 									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Дмитрий</a>
@@ -520,7 +527,7 @@
 							</div>
 							<div>
 								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
-									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+									<img class="w-12 h-12 rounded-full" src="assets/images/post_15.jpg" alt="avatar">
 								</a>
 								<div class="text-center truncate -mx-1">
 									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Никита</a>
@@ -528,7 +535,7 @@
 							</div>
 							<div>
 								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
-									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+									<img class="w-12 h-12 rounded-full" src="assets/images/post_4.jpg" alt="avatar">
 								</a>
 								<div class="text-center truncate -mx-1">
 									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Сергей</a>
@@ -536,7 +543,7 @@
 							</div>
 							<div>
 								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
-									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+									<img class="w-12 h-12 rounded-full" src="assets/images/post_3.jpg" alt="avatar">
 								</a>
 								<div class="text-center truncate -mx-1">
 									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Игорь</a>
@@ -544,7 +551,7 @@
 							</div>
 							<div>
 								<a href="#" class="block p-1.5 flex flex-shrink-0 items-center justify-center">
-									<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+									<img class="w-12 h-12 rounded-full" src="assets/images/post_5.jpg" alt="avatar">
 								</a>
 								<div class="text-center truncate -mx-1">
 									<a href="#" class="text-blue-800 text-sm hover:underline font-medium">Антон</a>
@@ -797,8 +804,735 @@
 					</div>
 				</div>
 				<div class="flex-1">
-					<div class="bg-white p-4">
-						Right
+					<!-- Header person info -->
+					<div x-data="{ open: false }" class="bg-white roubded border mb-4">
+						<div class="px-4 py-3">
+							<div class="flex justify-between items-center">
+								<div class="font-medium text-xl">
+									Даниил Аристов
+								</div>
+								<div class="text-gray-400">
+									online
+								</div>
+							</div>
+							<div class="text-gray-800">
+								Самый лучший день - сегодня!
+							</div>
+						</div>
+						<div class="px-4">
+							<div class="h-px bg-gray-200"></div>
+						</div>
+						<div class="p-4 space-y-2">
+							<div class="grid grid-cols-3 gap-2">
+								<div class="text-gray-500">
+									День рождения:
+								</div>
+								<div class="col-span-2">
+									<a href="#" class="text-blue-800 hover:underline">16 декабря</a>
+									<a href="#" class="text-blue-800 hover:underline">2002 г.</a>
+								</div>
+							</div>
+							<div class="grid grid-cols-3 gap-2">
+								<div class="text-gray-500">
+									Город:
+								</div>
+								<div class="col-span-2">
+									<a href="#" class="text-blue-800 hover:underline">Ярославль</a>
+								</div>
+							</div>
+							<button x-on:click="open = !open" type="button" class="grid grid-cols-3 gap-2 text-left w-full py-2 rounded text-blue-800 hover:bg-gray-100 focus:outline-none">
+								<div></div>
+								<div x-show="open === true" class="col-span-2">Скрыть подробную информацию</div>
+								<div x-show="open === false" class="col-span-2">Показать подробную информацию</div>
+							</button>
+							<div x-show="open" x-cloak class="group pt-4">
+								<div class="relative flex mb-3 items-center">
+									<div class="font-medium pr-2">
+										Контактная информация
+									</div>
+									<div class="flex-1">
+										<div class="h-px bg-gray-200 mt-1.5"></div>
+									</div>
+									<div class="absolute top-0 right-0 bg-white pl-2 opacity-0 group-hover:opacity-100 transition">
+										<a href="#" class="text-gray-400 hover:underline">Редактировать</a>
+									</div>
+								</div>
+								<div class="grid grid-cols-3 gap-2">
+									<div class="text-gray-500">
+										Телефон:
+									</div>
+									<div class="col-span-2">
+										<a href="#" class="text-blue-800 hover:underline">8-915-993-98-94</a>
+									</div>
+								</div>
+							</div>
+							<div x-show="open" x-cloak class="group pt-4">
+								<div class="relative flex mb-3 items-center">
+									<div class="font-medium pr-2">
+										Образование
+									</div>
+									<div class="flex-1">
+										<div class="h-px bg-gray-200 mt-1.5"></div>
+									</div>
+									<div class="absolute top-0 right-0 bg-white pl-2 opacity-0 group-hover:opacity-100 transition">
+										<a href="#" class="text-gray-400 hover:underline">Редактировать</a>
+									</div>
+								</div>
+								<div class="grid grid-cols-3 gap-2 mb-2">
+									<div class="text-gray-500">
+										Школа:
+									</div>
+									<div class="col-span-2">
+										<a href="#" class="text-blue-800 hover:underline">Школа №44</a>
+									</div>
+								</div>
+								<div class="grid grid-cols-3 gap-2 mb-2">
+									<div class="text-gray-500">
+										Высшее образование:
+									</div>
+									<div class="col-span-2">
+										<a href="#" class="text-blue-800 hover:underline">Ярославский государственный технический университет (ЯГТУ)</a>
+									</div>
+								</div>
+							</div>
+							<div x-show="open" x-cloak class="group pt-4">
+								<div class="relative flex mb-3 items-center">
+									<div class="font-medium pr-2">
+										Личная информация
+									</div>
+									<div class="flex-1">
+										<div class="h-px bg-gray-200 mt-1.5"></div>
+									</div>
+									<div class="absolute top-0 right-0 bg-white pl-2 opacity-0 group-hover:opacity-100 transition">
+										<a href="#" class="text-gray-400 hover:underline">Редактировать</a>
+									</div>
+								</div>
+								<div class="grid grid-cols-3 gap-2 mb-2">
+									<div class="text-gray-500">
+										Интересы:
+									</div>
+									<div class="col-span-2">
+										<div href="#">Программирование, игра на гитаре</div>
+									</div>
+								</div>
+								<div class="grid grid-cols-3 gap-2 mb-2">
+									<div class="text-gray-500">
+										Сообщества:
+									</div>
+									<div class="col-span-2">
+										<a href="#" class="text-blue-800 hover:underline">ЯГТУ,</a>
+										<a href="#" class="text-blue-800 hover:underline">IT Progger,</a>
+										<a href="#" class="text-blue-800 hover:underline">Подслушано Ярославль,</a>
+										<a href="#" class="text-blue-800 hover:underline">Новости ЯГТУ</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pb-1 border-t flex justify-center items-center">
+							<a href="#" class="block p-3 text-center group">
+								<div class="text-blue-700 font-medium text-xl">125</div>
+								<div class="text-gray-500 group-hover:text-gray-700">Друзей</div>
+							</a>
+							<a href="#" class="block p-3 text-center group">
+								<div class="text-blue-700 font-medium text-xl">209</div>
+								<div class="text-gray-500 group-hover:text-gray-700">Подписчиков</div>
+							</a>
+							<a href="#" class="block p-3 text-center group">
+								<div class="text-blue-700 font-medium text-xl">69</div>
+								<div class="text-gray-500 group-hover:text-gray-700">Фотографий</div>
+							</a>
+							<a href="#" class="block p-3 text-center group">
+								<div class="text-blue-700 font-medium text-xl">4</div>
+								<div class="text-gray-500 group-hover:text-gray-700">Отметки</div>
+							</a>
+							<a href="#" class="block p-3 text-center group">
+								<div class="text-blue-700 font-medium text-xl">3</div>
+								<div class="text-gray-500 group-hover:text-gray-700">Статьи</div>
+							</a>
+						</div>
+					</div>
+
+					<!-- Photo -->
+					<div class="bg-white rounded border mb-4">
+						<div class="flex justify-between items-center">
+							<a href="#" class="flex-1 pl-4 pt-3 pb-1 font-medium">
+								Мои фотографии <span class="text-gray-500"> 125</span>
+							</a>
+							<a href="#" class="pr-4 pt-3 pb-1 text-gray-500 hover:underline">
+								показать на карте
+							</a>
+						</div>
+						<div class="px-4 pt-2 pb-4">
+							<div class="grid grid-cols-4 gap-1">
+								<div class="relative group pt-full cursor-pointer">
+									<div class="absolute inset-0">
+										<img class="w-full h-full object-center object-cover" src="assets/images/7.JPEG" alt="foto">
+									</div>
+									<div class="absolute top-0 right-0 opacity-0 group-hover:opacity-100">
+										<button class="flex items-center justify-center w-4 h-4 bg-black bg-opacity-50 text-white text-opacity-75 hover:text-opacity-100 rounded-tr-sm rounded-bl-sm focus:outline-none">
+											<svg class="w-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="relative group pt-full cursor-pointer">
+									<div class="absolute inset-0">
+										<img class="w-full h-full object-center object-cover" src="assets/images/8.JPG" alt="foto">
+									</div>
+									<div class="absolute top-0 right-0 opacity-0 group-hover:opacity-100">
+										<button class="flex items-center justify-center w-4 h-4 bg-black bg-opacity-50 text-white text-opacity-75 hover:text-opacity-100 rounded-tr-sm rounded-bl-sm focus:outline-none">
+											<svg class="w-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="relative group pt-full cursor-pointer">
+									<div class="absolute inset-0">
+										<img class="w-full h-full object-center object-cover" src="assets/images/70.JPG" alt="foto">
+									</div>
+									<div class="absolute top-0 right-0 opacity-0 group-hover:opacity-100">
+										<button class="flex items-center justify-center w-4 h-4 bg-black bg-opacity-50 text-white text-opacity-75 hover:text-opacity-100 rounded-tr-sm rounded-bl-sm focus:outline-none">
+											<svg class="w-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="relative group pt-full cursor-pointer">
+									<div class="absolute inset-0">
+										<img class="w-full h-full object-center object-cover" src="assets/images/3.jpg" alt="foto">
+									</div>
+									<div class="absolute top-0 right-0 opacity-0 group-hover:opacity-100">
+										<button class="flex items-center justify-center w-4 h-4 bg-black bg-opacity-50 text-white text-opacity-75 hover:text-opacity-100 rounded-tr-sm rounded-bl-sm focus:outline-none">
+											<svg class="w-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Form -->
+					<div x-data="{ open: false }" x-bind:class="{ 'min-h-28': open}" class="bg-white rounded border mb-4">
+						<div class="px-4">
+							<div class="flex">
+								<div class="flex-shrink-0 py-3">
+									<img class="w-9 h-9 rounded-full" src="assets/images/avatar.jpg" alt="avatar">
+								</div>
+								<div class="flex-1">
+									<div class="relative">
+										<div class="absolute top-3 left-3 text-gray-400 font-medium">Что у вас нового?</div>
+										<div x-on:focus="open = true" x-on:blur="open = false" class="relative p-3 w-full pt-8 resize-none text-gray-800 font-medium focus:outline-none" contenteditable style="min-height: 3rem;"></div>
+									</div>
+								</div>
+								<div x-show="!open" class="flex items-center space-x-2">
+									<button aria-label="Фотография" data-balloon-pos="up-right" class="focus:outline-none group">
+										<svg class="w-6 text-gray-400 group-hover:text-gray-500 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+											<path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
+										</svg>
+									</button>
+									<button aria-label="Видеозаписи" data-balloon-pos="up-right" class="focus:outline-none group">
+										<svg class="w-6 text-gray-400 group-hover:text-gray-500 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+											<path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
+										</svg>
+									</button>
+									<button aria-label="Аудиозаписи" data-balloon-pos="up-right" class="focus:outline-none group">
+										<svg class="w-6 text-gray-400 group-hover:text-gray-500 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z" />
+										</svg>
+									</button>
+									<button aria-label="Статьи" data-balloon-pos="up-right" class="focus:outline-none group">
+										<svg class="w-6 text-gray-400 group-hover:text-gray-500 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
+										</svg>
+									</button>
+									<div class="h-5 w-px bg-gray-300"></div>
+									<button aria-label="Повторить" data-balloon-pos="up-right" class="focus:outline-none group">
+										<svg class="w-6 text-gray-400 group-hover:text-gray-500 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" />
+										</svg>
+									</button>
+								</div>
+								<button>
+									<svg x-show="open" x-cloak class="w-6 text-gray-400 group-hover:text-gray-500 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+										<path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
+									</svg>
+								</button>
+							</div>
+							<div x-show="open" x-cloak>
+								<div class="bg-gray-200 h-px"></div>
+								<div class="flex items-center space-x-4 py-3">
+									<div class="relative">
+										<button class="flex items-center text-gray-400 hover:text-gray-500 focus:outline-none">
+											Видно всем
+											<div>
+												<svg class="w-4 text-gray-400 pl-0.5 pt-1 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+													<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+												</svg>
+											</div>
+										</button>
+									</div>
+									<div class="relative">
+										<button class="flex items-center text-gray-400 hover:text-gray-500 focus:outline-none">
+											Сейчас
+											<div>
+												<svg class="w-4 text-gray-400 pl-0.5 pt-1 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+													<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+												</svg>
+											</div>
+										</button>
+									</div>
+									<div class="relative">
+										<button class="flex items-center text-gray-400 hover:text-gray-500 focus:outline-none">
+											Тематика
+											<div>
+												<svg class="w-4 text-gray-400 pl-0.5 pt-1 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+													<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+												</svg>
+											</div>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div x-show="open" x-cloak class="px-4 py-3 bg-gray-50 border-t rounded-b">
+							<div class="flex items-center justify-between">
+								<div class="flex items-center space-x-2">
+									<button aria-label="Цвет" data-balloon-pos="up-right" class="focus:outline-none">
+										<svg class="w-6" viewBox="0 0 64 64" style="enable-background:new 0 0 512 512" xml:space="preserve">
+											<path fill="#f6bb42" d="M63 32H53c0-5.801-2.35-11.051-6.15-14.851l7.07-7.069C59.53 15.689 63 23.439 63 32z" data-original="#f6bb42"></path>
+											<path fill="#8cc152" d="M53 32h10c0 8.55-3.46 16.3-9.08 21.909l-7.07-7.06A20.93 20.93 0 0 0 53 32z" data-original="#8cc152"></path>
+											<path fill="#37bc9b" d="M53.92 53.909v.011C48.31 59.529 40.57 63 32 63V53c5.8 0 11.05-2.351 14.85-6.15z" data-original="#37bc9b"></path>
+											<path fill="#e9573f" d="m53.92 10.08-7.07 7.069A20.938 20.938 0 0 0 32 11V1c8.57 0 16.31 3.47 21.92 9.08z" data-original="#e9573f"></path>
+											<path fill="#ffce54" d="M53 32H43c0-3.04-1.23-5.79-3.22-7.78l7.069-7.07A20.927 20.927 0 0 1 53 32z" data-original="#ffce54"></path>
+											<path fill="#48cfad" d="m39.78 39.779 7.069 7.07A20.931 20.931 0 0 1 32 53V43c3.04 0 5.79-1.23 7.78-3.221z" data-original="#48cfad"></path>
+											<path fill="#4a89dc" d="M32 53v10c-8.56 0-16.31-3.471-21.92-9.08l7.07-7.07C20.95 50.649 26.21 53 32 53z" data-original="#4a89dc"></path>
+											<path fill="#5d9cec" d="M32 43v10c-5.79 0-11.05-2.351-14.85-6.15l7.069-7.07A10.987 10.987 0 0 0 32 43z" data-original="#5d9cec"></path>
+											<path fill="#ed5565" d="M32 11v10c-3.03 0-5.78 1.229-7.77 3.22h-.01l-7.069-7.07A20.948 20.948 0 0 1 32 11z" data-original="#ed5565"></path>
+											<path fill="#967adc" d="m17.15 46.85-7.07 7.07C4.47 48.31 1 40.56 1 32h10c0 5.8 2.35 11.05 6.15 14.85z" data-original="#967adc"></path>
+											<path fill="#a0d468" d="M43.01 32H53c0 5.8-2.35 11.05-6.15 14.85l-7.069-7.07A10.988 10.988 0 0 0 43 32z" data-original="#a0d468"></path>
+											<path fill="#ec87c0" d="m17.15 17.149 7.069 7.07A10.973 10.973 0 0 0 21 32H11c0-5.801 2.35-11.051 6.15-14.851z" data-original="#ec87c0"></path>
+											<path fill="#ac92ec" d="m24.22 39.779-7.069 7.07A20.927 20.927 0 0 1 11 32h10c0 3.029 1.23 5.79 3.22 7.779z" data-original="#ac92ec"></path>
+											<path fill="#d770ad" d="m10.08 10.08 7.07 7.069C13.35 20.949 11 26.199 11 32H1c0-8.561 3.47-16.311 9.08-21.92z" data-original="#d770ad" class=""></path>
+											<path fill="#fc6e51" d="m46.85 17.149-7.069 7.07A10.969 10.969 0 0 0 32 21V11c5.8 0 11.05 2.35 14.85 6.149z" data-original="#fc6e51"></path>
+											<path fill="#da4453" d="M32 1v10c-5.79 0-11.05 2.35-14.85 6.149l-7.07-7.069C15.69 4.47 23.44 1 32 1z" data-original="#da4453"></path>
+										</svg>
+									</button>
+									<div class="h-5 w-px bg-gray-300"></div>
+									<button aria-label="Фотография" data-balloon-pos="up-right" class="focus:outline-none group">
+										<svg class="w-6 text-gray-400 group-hover:text-gray-500 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+											<path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
+										</svg>
+									</button>
+									<button aria-label="Видеозаписи" data-balloon-pos="up-right" class="focus:outline-none group">
+										<svg class="w-6 text-gray-400 group-hover:text-gray-500 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+											<path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
+										</svg>
+									</button>
+									<button aria-label="Аудиозаписи" data-balloon-pos="up-right" class="focus:outline-none group">
+										<svg class="w-6 text-gray-400 group-hover:text-gray-500 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z" />
+										</svg>
+									</button>
+									<button aria-label="Статьи" data-balloon-pos="up-right" class="focus:outline-none group">
+										<svg class="w-6 text-gray-400 group-hover:text-gray-500 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
+										</svg>
+									</button>
+									<div class="h-5 w-px bg-gray-300"></div>
+									<button aria-label="Повторить" data-balloon-pos="up-right" class="focus:outline-none group">
+										<svg class="w-6 text-gray-400 group-hover:text-gray-500 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" />
+										</svg>
+									</button>
+								</div>
+								<div class="flex items-center space-x-4">
+									<button type="button" class="focus:outline-none group">
+										<svg class="w-6 text-gray-400 group-hover:text-gray-500 transition" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+											<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+										</svg>
+									</button>
+									<button type="button" class="px-3.5 py-1.5 bg-blue-600 text-white rounded hover:bg-opacity-80 focus:outline-none">
+										Опубликовать
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Posts -->
+					<div class="bg-white rounded border mb-4">
+						<div class="p-4">
+							<div class="flex justify-between">
+								<div class="flex items-center">
+									<a href="#" class="block flex-shrink-0">
+										<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="">
+									</a>
+									<div class="pl-3">
+										<a href="#" class="block text-blue-800 font-medium hover:underline">Даниил Аристов</a>
+										<div class="pt-1 text-gray-400">18 сентября в 21:26</div>
+									</div>
+								</div>
+								<div>
+									<div x-data="{ open: false }" x-on:mouseenter="open = true" x-on:mouseleave="open = false" class="relative">
+										<button class="p-3 focus:outline-none" type="button">
+											<svg class="w-5 text-gray-400 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+											</svg>
+										</button>
+										<div x-show="open" class="absolute top-full -right-4 z-10">
+											<div class="relative">
+												<div class="bg-white border border-gray-300 w-56 py-2 rounded-b shadow-sm whitespace-nowrap">
+													<a class="flex item-center px-4 py-1.5 text-blue-700 hover:bg-gray-100" href="#">
+														Удалить запись
+													</a>
+													<a class="flex item-center px-4 py-1.5 text-blue-700 hover:bg-gray-100" href="#">
+														Архивировать запись
+													</a>
+													<a class="flex item-center px-4 py-1.5 text-blue-700 hover:bg-gray-100" href="#">
+														Сохранить в закладках
+													</a>
+													<a class="flex item-center px-4 py-1.5 text-blue-700 hover:bg-gray-100" href="#">
+														Закрепить
+													</a>
+													<a class="flex item-center px-4 py-1.5 text-blue-700 hover:bg-gray-100" href="#">
+														Включить комментарии
+													</a>
+												</div>
+											</div>
+											<div class="absolute right-0 bottom-full w-4 h-4 mr-7 overflow-hidden">
+												<div class="absolute right-0 left-0 h-full mt-3 inset-0 bg-white border border-gray-300 transform rotate-45 origin-center"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="pt-3">
+								<div class="font-medium text-gray-600">Лишь тот способен добрым быть, кому пришлось от злости выть. Лишь тот узнает дружбы цену, кто испытал друзей измену. И лишь тому любовь дана, кто ненависть познал сполна.</div>
+							</div>
+							<div class="pt-4">
+								<div class="bg-gray-200 h-px mb-3"></div>
+								<div class="flex justify-between items-center">
+									<div class="flex items-center space-x-5">
+										<div x-data="{ liked: true }" x-on:click="liked = !liked">
+											<div x-show="liked">
+												<button class="flex items-center text-gray-400 font-medium focus:outline-none">
+													<svg class="w-6 text-gray-400 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="red">
+														<path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+													</svg>
+													<span class="ml-1 text-gray-500">26</span>
+												</button>
+											</div>
+											<div x-show="!liked">
+												<button class="flex items-center text-gray-400 font-medium focus:outline-none">
+													<svg class="w-6 text-gray-400 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+														<path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+													</svg>
+													<span class="ml-1 text-gray-500">27</span>
+												</button>
+											</div>
+										</div>
+										<button class="focus:outline-none">
+											<svg class="w-6 text-gray-400 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 21l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+											</svg>
+										</button>
+										<button class="focus:outline-none">
+											<svg class="w-6 text-gray-400 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
+											</svg>
+										</button>
+									</div>
+									<div class="flex items-center">
+										<svg class="w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+											<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+										</svg>
+										<span class="text-gray-400 ml-1"> 2456</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bg-white rounded border mb-4">
+						<div class="p-4">
+							<div class="flex justify-between">
+								<div class="flex items-center">
+									<a href="#" class="block flex-shrink-0">
+										<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="">
+									</a>
+									<div class="pl-3">
+										<a href="#" class="block text-blue-800 font-medium hover:underline">Даниил Аристов</a>
+										<div class="pt-1 text-gray-400">25 августа в 20:18</div>
+									</div>
+								</div>
+								<div>
+									<div x-data="{ open: false }" x-on:mouseenter="open = true" x-on:mouseleave="open = false" class="relative">
+										<button class="p-3 focus:outline-none" type="button">
+											<svg class="w-5 text-gray-400 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+											</svg>
+										</button>
+										<div x-show="open" class="absolute top-full -right-4 z-10">
+											<div class="relative">
+												<div class="bg-white border border-gray-300 w-56 py-2 rounded-b shadow-sm whitespace-nowrap">
+													<a class="flex item-center px-4 py-1.5 text-blue-700 hover:bg-gray-100" href="#">
+														Удалить запись
+													</a>
+													<a class="flex item-center px-4 py-1.5 text-blue-700 hover:bg-gray-100" href="#">
+														Архивировать запись
+													</a>
+													<a class="flex item-center px-4 py-1.5 text-blue-700 hover:bg-gray-100" href="#">
+														Сохранить в закладках
+													</a>
+													<a class="flex item-center px-4 py-1.5 text-blue-700 hover:bg-gray-100" href="#">
+														Закрепить
+													</a>
+													<a class="flex item-center px-4 py-1.5 text-blue-700 hover:bg-gray-100" href="#">
+														Включить комментарии
+													</a>
+												</div>
+											</div>
+											<div class="absolute right-0 bottom-full w-4 h-4 mr-7 overflow-hidden">
+												<div class="absolute right-0 left-0 h-full mt-3 inset-0 bg-white border border-gray-300 transform rotate-45 origin-center"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="pt-3">
+								<div class="font-medium text-gray-600">Summer 2023</div>
+								<div class="grid grid-cols-3 gap-1 pt-3">
+									<div class="relative group pt-full cursor-pointer">
+										<div class="absolute inset-0">
+											<img class="w-full h-full object-center object-cover rounded" src="assets/images/post_1.jpg" alt="foto">
+										</div>
+									</div>
+									<div class="relative group pt-full cursor-pointer">
+										<div class="absolute inset-0">
+											<img class="w-full h-full object-center object-cover rounded" src="assets/images/post_2.jpg" alt="foto">
+										</div>
+									</div>
+									<div class="relative group pt-full cursor-pointer">
+										<div class="absolute inset-0">
+											<img class="w-full h-full object-center object-cover rounded" src="assets/images/post_3.jpg" alt="foto">
+										</div>
+									</div>
+								</div>
+								<div class="grid grid-cols-3 gap-1 pt-2">
+									<div class="relative group pt-full cursor-pointer">
+										<div class="absolute inset-0">
+											<img class="w-full h-full object-center object-cover rounded" src="assets/images/post_4.jpg" alt="foto">
+										</div>
+									</div>
+									<div class="relative group pt-full cursor-pointer">
+										<div class="absolute inset-0">
+											<img class="w-full h-full object-center object-cover rounded" src="assets/images/post_5.jpg" alt="foto">
+										</div>
+									</div>
+									<div class="relative group pt-full cursor-pointer">
+										<div class="absolute inset-0">
+											<img class="w-full h-full object-center object-cover rounded" src="assets/images/post_6.jpg" alt="foto">
+										</div>
+									</div>
+								</div>
+								<div class="grid grid-cols-3 gap-1 pt-2">
+									<div class="relative group pt-full cursor-pointer">
+										<div class="absolute inset-0">
+											<img class="w-full h-full object-center object-cover rounded" src="assets/images/post_7.jpg" alt="foto">
+										</div>
+									</div>
+									<div class="relative group pt-full cursor-pointer">
+										<div class="absolute inset-0">
+											<img class="w-full h-full object-center object-cover rounded" src="assets/images/post_8.jpg" alt="foto">
+										</div>
+									</div>
+									<div class="relative group pt-full cursor-pointer">
+										<div class="absolute inset-0">
+											<img class="w-full h-full object-center object-cover rounded" src="assets/images/post_9.jpg" alt="foto">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="pt-4">
+								<div class="bg-gray-200 h-px mb-3"></div>
+								<div class="flex justify-between items-center">
+									<div class="flex items-center space-x-5">
+										<div x-data="{ liked: false }" x-on:click="liked = !liked">
+											<div x-show="liked">
+												<button class="flex items-center text-gray-400 font-medium focus:outline-none">
+													<svg class="w-6 text-gray-400 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="red">
+														<path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+													</svg>
+													<span class="ml-1 text-gray-500">26</span>
+												</button>
+											</div>
+											<div x-show="!liked">
+												<button class="flex items-center text-gray-400 font-medium focus:outline-none">
+													<svg class="w-6 text-gray-400 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+														<path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+													</svg>
+													<span class="ml-1 text-gray-500">25</span>
+												</button>
+											</div>
+										</div>
+										<button class="focus:outline-none">
+											<svg class="w-6 text-gray-400 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 21l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+											</svg>
+										</button>
+										<button class="focus:outline-none">
+											<svg class="w-6 text-gray-400 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
+											</svg>
+										</button>
+									</div>
+									<div class="flex items-center">
+										<svg class="w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+											<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+										</svg>
+										<span class="text-gray-400 ml-1"> 1225</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bg-white rounded border mb-4">
+						<div class="p-4">
+							<div class="flex justify-between">
+								<div class="flex items-center">
+									<a href="#" class="block flex-shrink-0">
+										<img class="w-12 h-12 rounded-full" src="assets/images/avatar.jpg" alt="">
+									</a>
+									<div class="pl-3">
+										<a href="#" class="block text-blue-800 font-medium hover:underline">Даниил Аристов</a>
+										<div class="pt-1 text-gray-400">25 августа в 20:18</div>
+									</div>
+								</div>
+								<div>
+									<div x-data="{ open: false }" x-on:mouseenter="open = true" x-on:mouseleave="open = false" class="relative">
+										<button class="p-3 focus:outline-none" type="button">
+											<svg class="w-5 text-gray-400 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+											</svg>
+										</button>
+										<div x-show="open" class="absolute top-full -right-4 z-10">
+											<div class="relative">
+												<div class="bg-white border border-gray-300 w-56 py-2 rounded-b shadow-sm whitespace-nowrap">
+													<a class="flex item-center px-4 py-1.5 text-blue-700 hover:bg-gray-100" href="#">
+														Удалить запись
+													</a>
+													<a class="flex item-center px-4 py-1.5 text-blue-700 hover:bg-gray-100" href="#">
+														Архивировать запись
+													</a>
+													<a class="flex item-center px-4 py-1.5 text-blue-700 hover:bg-gray-100" href="#">
+														Сохранить в закладках
+													</a>
+													<a class="flex item-center px-4 py-1.5 text-blue-700 hover:bg-gray-100" href="#">
+														Закрепить
+													</a>
+													<a class="flex item-center px-4 py-1.5 text-blue-700 hover:bg-gray-100" href="#">
+														Включить комментарии
+													</a>
+												</div>
+											</div>
+											<div class="absolute right-0 bottom-full w-4 h-4 mr-7 overflow-hidden">
+												<div class="absolute right-0 left-0 h-full mt-3 inset-0 bg-white border border-gray-300 transform rotate-45 origin-center"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="pt-3">
+								<div class="font-medium text-gray-600">Сходили с <a href="#" class="text-blue-800 hover:underline">Nastya Livanova</a> в Волковский театр, окультурились</div>
+								<div class="grid grid-cols-3 gap-1 pt-3">
+									<div class="relative group pt-full cursor-pointer">
+										<div class="absolute inset-0">
+											<img class="w-full h-full object-center object-cover rounded" src="assets/images/post_10.jpg" alt="foto">
+										</div>
+									</div>
+									<div class="relative group pt-full cursor-pointer">
+										<div class="absolute inset-0">
+											<img class="w-full h-full object-center object-cover rounded" src="assets/images/post_11.jpg" alt="foto">
+										</div>
+									</div>
+									<div class="relative group pt-full cursor-pointer">
+										<div class="absolute inset-0">
+											<img class="w-full h-full object-center object-cover rounded" src="assets/images/post_12.jpg" alt="foto">
+										</div>
+									</div>
+								</div>
+								<div class="grid grid-cols-3 gap-1 pt-2">
+									<div class="relative group pt-full cursor-pointer">
+										<div class="absolute inset-0">
+											<img class="w-full h-full object-center object-cover rounded" src="assets/images/post_13.jpg" alt="foto">
+										</div>
+									</div>
+									<div class="relative group pt-full cursor-pointer">
+										<div class="absolute inset-0">
+											<img class="w-full h-full object-center object-cover rounded" src="assets/images/post_14.jpg" alt="foto">
+										</div>
+									</div>
+									<div class="relative group pt-full cursor-pointer">
+										<div class="absolute inset-0">
+											<img class="w-full h-full object-center object-cover rounded" src="assets/images/post_15.jpg" alt="foto">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="pt-4">
+								<div class="bg-gray-200 h-px mb-3"></div>
+								<div class="flex justify-between items-center">
+									<div class="flex items-center space-x-5">
+										<div x-data="{ liked: false }" x-on:click="liked = !liked">
+											<div x-show="liked">
+												<button class="flex items-center text-gray-400 font-medium focus:outline-none">
+													<svg class="w-6 text-gray-400 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="red">
+														<path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+													</svg>
+													<span class="ml-1 text-gray-500">26</span>
+												</button>
+											</div>
+											<div x-show="!liked">
+												<button class="flex items-center text-gray-400 font-medium focus:outline-none">
+													<svg class="w-6 text-gray-400 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+														<path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+													</svg>
+													<span class="ml-1 text-gray-500">25</span>
+												</button>
+											</div>
+										</div>
+										<button class="focus:outline-none">
+											<svg class="w-6 text-gray-400 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 21l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+											</svg>
+										</button>
+										<button class="focus:outline-none">
+											<svg class="w-6 text-gray-400 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+												<path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
+											</svg>
+										</button>
+									</div>
+									<div class="flex items-center">
+										<svg class="w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+											<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+										</svg>
+										<span class="text-gray-400 ml-1"> 1658</span>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

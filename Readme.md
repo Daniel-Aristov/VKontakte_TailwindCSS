@@ -3,7 +3,7 @@
 ### Технологии:
 
 - HTML
-- CSS (TailwindCSS)
+- CSS (TailwindCSS, balloon.css)
 - JS (Alpine.js)
 
-### Ссылка для просмотра сайта: [VK]("Сайт на Netlify")
+### Ссылка для просмотра сайта: [VK](https://vk-aristov.netlify.app/ "Сайт на Netlify")

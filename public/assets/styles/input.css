@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 16px;
+	color: black;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+*, 
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+[x-cloak] { 
+	display: none !important; 
+}
+
+.text-xs {
+	font-size: 0.9rem !important;
+}
+
+.pt-full {
+	padding-top: 100%;
+}
+
+.min-h-28 {
+	min-height: 5rem;
+}
+
+.header-dropdown-link {
+	@apply flex items-center px-4 py-2 text-blue-700 hover:bg-gray-100;
+}

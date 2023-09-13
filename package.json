@@ -1,0 +1,22 @@
+{
+  "name": "vkontakte_tailwindcss",
+  "version": "1.0.0",
+  "description": "- HTML\r - CSS (TailwindCSS, balloon.css)\r - JS (Alpine.js)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daniel-Aristov/VKontakte_TailwindCSS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Daniel-Aristov/VKontakte_TailwindCSS/issues"
+  },
+  "homepage": "https://github.com/Daniel-Aristov/VKontakte_TailwindCSS#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
